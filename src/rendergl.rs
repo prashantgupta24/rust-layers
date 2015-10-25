@@ -482,7 +482,9 @@ pub struct RenderContext {
 impl RenderContext {
     pub fn new(compositing_display: NativeDisplay,
                show_debug_borders: bool,
-               force_near_texture_filter: bool) -> RenderContext {
+               force_near_texture_filter: bool,
+               graphics_select: String) -> RenderContext {
+               println!("Graphics select: {}",graphics_select);
         gl::enable(gl::TEXTURE_2D);
 
         // Each layer uses premultiplied alpha!
